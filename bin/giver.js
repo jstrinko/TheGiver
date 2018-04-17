@@ -12,9 +12,9 @@ commander
 
 const config = require(commander.config); 
 const giver_logger = new logger({
-	filename: 'giver-%Y%m%d.log',
+	filename: 'giver-%DATE%.log',
 	console: commander.daemon === true ? false : true,
-	symlink: 'giver/log'
+	dirname: config.log_dirname || ''
 });
 giver_logger.extend(console);
 config.logger = giver_logger;
