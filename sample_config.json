@@ -1,0 +1,20 @@
+{
+  /* server port */
+  "port": 1337,
+  /* (optional) logs path, defaults to /var/log */
+  "log_dirname": "/var/log",
+  /* map of the endpoints and their targets
+   *   where key is an endpoint
+   *   and its value should be an array of the target hosts/endpoints */
+  "mappings": {
+    /* example item */
+    "/health-check": [
+      "http://localhost:1337/test"
+    ],
+
+  },
+  "ssl_config": {
+    /* (optional) express secure config object 
+     * as in https://nodejs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener */
+  }
+}
