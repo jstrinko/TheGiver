@@ -3,6 +3,14 @@
   "port": 1337,
   /* (optional) logs path, defaults to /var/log */
   "log_dirname": "/var/log",
+  /* log rotation pattern */
+  "log_date_pattern": "YYYY-MM-DD",
+  /* should be old ones be zipped */
+  "log_zipped": true,
+  /* max logs files size before rotated */
+  "log_max_size": "20m",
+  /* max logs files rotation duration */
+  "log_max_files": "7d",
   /* map of the endpoints and their targets
    *   where key is an endpoint
    *   and its value should be an array of the target hosts/endpoints */

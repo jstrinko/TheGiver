@@ -14,7 +14,12 @@ const config = require(commander.config);
 const giver_logger = new logger({
 	filename: 'giver-%DATE%.log',
 	console: commander.daemon === true ? false : true,
-	dirname: config.log_dirname || ''
+	dirname: config.log_dirname || '',
+	datePattern: config.log_date_pattern || 'YYYY-MM-DD',
+	zippedArchive: config.log_zipped || true,
+	maxSize: config.log_max_size || '20m',
+	maxFiles: config.log_max_files || '7d',
+
 });
 giver_logger.extend(console);
 config.logger = giver_logger;
